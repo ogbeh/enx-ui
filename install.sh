@@ -111,7 +111,7 @@ install_base(){
 download_xui(){
 
     
-    if [ $# == 1 ]; then
+    if [ $# == 0 ]; then
         last_version=$(curl -Ls "https://api.github.com/repos/ogbeh/enx-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') || last_version=$(curl -sm8 https://raw.githubusercontent.com/ogbeh/enx-ui/main/config/version >/dev/null 2>&1)
         if [[ -z "$last_version" ]]; then
             red "Detecting the X-UI version failed, please make sure your server can connect to the Github API"
