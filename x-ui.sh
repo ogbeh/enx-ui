@@ -114,7 +114,7 @@ update() {
         fi
         
         yellow "The latest version of X-UI is: $ {last_version}, starting update..."
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://github.com/NidukaAkalanka/x-ui-english/releases/download/${last_version}/x-ui-linux-$(archAffix).tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://github.com/ogbeh/enx-ui/releases/download/${last_version}/x-ui-linux-$(archAffix).tar.gz
         if [[ $? -ne 0 ]]; then
             red "Download the X-UI failure, please make sure your server can connect and download the files from github"
             exit 1
@@ -324,7 +324,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/NidukaAkalanka/x-ui-english/raw/master/x-ui.sh
+    wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/ogbeh/enx-ui/raw/master/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         red "Downloading the script failed, please make sure your server can connect and download the files from github"
