@@ -107,7 +107,7 @@ update() {
             rm -rf /usr/local/x-ui/
         fi
         
-        last_version=$(curl -Ls "https://api.github.com/repos/NidukaAkalanka/x-ui-english/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') || last_version=$(curl -sm8 https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/main/config/version)
+        last_version=$(curl -Ls "https://api.github.com/repos/ogbeh/enx-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') || last_version=$(curl -sm8 https://raw.githubusercontent.com/ogbeh/enx-ui/main/config/version)
         if [[ -z "$last_version" ]]; then
             red "Detecting the X-UI version failed, please make sure your server can connect to the GitHub API"
             exit 1
@@ -128,7 +128,7 @@ update() {
         chmod +x x-ui bin/xray-linux-$(archAffix)
         cp -f x-ui.service /etc/systemd/system/
         
-        wget -N --no-check-certificate https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/main/x-ui.sh -O /usr/bin/x-ui
+        wget -N --no-check-certificate https://raw.githubusercontent.com/ogbeh/enx-ui/main/x-ui.sh -O /usr/bin/x-ui
         chmod +x /usr/local/x-ui/x-ui.sh
         chmod +x /usr/bin/x-ui
         
@@ -576,7 +576,7 @@ show_menu() {
         13) check_install && disable_xui ;;
         14) update_geo ;;
         15) install_bbr ;;
-        16) wget -N --no-check-certificate https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/main/acme.sh && bash acme.sh && before_show_menu ;;
+        16) wget -N --no-check-certificate https://raw.githubusercontent.com/ogbeh/enx-ui/main/acme.sh && bash acme.sh && before_show_menu ;;
         17) open_ports ;;
         18) wget -N --no-check-certificate https://raw.githubusercontent.com/taffychan/warp/main/warp.sh && bash warp.sh && before_show_menu ;;
         *) red "Please enter the correct option [0-18]" ;;
