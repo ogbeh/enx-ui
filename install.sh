@@ -248,6 +248,7 @@ install_xui() {
     echo -e "Hossin Asaadi     - https://github.com/hossinasaadi"
     echo -e "Yu FranzKafka     - https://github.com/FranzKafkaYu"
     echo -e "Niduka Akalanka   - https://github.com/NidukaAkalanka"
+    echo -e "Niduka Akalanka   - https://github.com/ogbeh"
     echo -e "--------------------------------------------------------------------------------"
     show_login_info
     echo -e ""
